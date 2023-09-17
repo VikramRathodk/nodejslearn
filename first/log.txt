@@ -13,3 +13,8 @@ vikramvikram undefined
 
 
 //3rd part (Last part ) -minor fixes
+
+2nd part->Recommended bug fixes
+
+
+1st part  -> Major Releases 
