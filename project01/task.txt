@@ -1,0 +1,15 @@
+
+
+
+Rest Api
+
+
+GET /Users      -->get the list of all the users
+
+GET /Users/id    ..> get the list of users with the id
+
+POST /Users   --> post the data to the api data (json)
+
+PATCH  /Users/id  -->Edit the data
+
+DELETE /Users/id -->    Delete the user data with the particular id
