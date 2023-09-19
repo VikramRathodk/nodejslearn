@@ -55,9 +55,18 @@ app.use((req, res, next) => {
 // console.log(users)
 const port = 8000;
 
+/*
+Headers :
+HTTP headers let the client and the server pass additional information with an HTTP request or response.
+*/
 //Rest api endpoints
 //GET USER
 app.get("/api/users", (req, res) => {
+  //Good practice
+  //Add the x before the name of the header
+  res.setHeader("X-myName", "Vikram");
+  //Log the custom header from Request object
+  console.log(req.headers);
   return res.json(users);
 });
 
