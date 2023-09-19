@@ -1,6 +1,8 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 const port = 5000;
+const users = require("./data.json");
+const fs = require("fs");
 
 /*
 Http Response Status Code
@@ -14,7 +16,28 @@ HTTP response status codes indicate whether a specific HTTP request has been suc
 
 */
 
+//middle ware
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+);
 
-app.listen(port,()=>{
-   console.log("Server Running",port);  
+//REst api calls
+app.get("/api/users", (req, res) => {
+  return res.json(users);
+});
+
+//post request
+app.post("/api/users", (req, res) => {
+  const body = req.body;
+  users.push({ id: users.length + 1, ...body });
+  console.log(body);
+  fs.writeFile("./data.json", JSON.stringify(users), (error, data) => {
+    return res.status(201).json({ status: "Success", id: users.length });
+  });
+});
+
+app.listen(port, () => {
+  console.log("Server Running", port);
 });
