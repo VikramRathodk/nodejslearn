@@ -83,7 +83,7 @@ Node.js can connect to various databases, including MongoDB, MySQL, PostgreSQL, 
 ## 10. Additional Resources
 
 - [Node.js Official Documentation](https://nodejs.org/en/docs/)
-- [Node.js Design Patterns](https://nodejsdesignpatterns.com/)
+
 - [Node.js Best Practices](https://github.com/goldbergyoni/nodebestpractices)
 - [Node.js Tutorials on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Node.js_tutorial)
 
